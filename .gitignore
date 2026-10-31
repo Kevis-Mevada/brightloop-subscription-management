@@ -20,6 +20,8 @@ playwright/.cache
 # misc
 .DS_Store
 *.pem
+*.webm
+*.mp4
 
 # debug logs
 npm-debug.log*

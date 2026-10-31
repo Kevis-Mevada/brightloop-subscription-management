@@ -209,6 +209,9 @@ export async function PUT(req: NextRequest) {
       newStatus = "CONFIRMED";
     } else if (action === "ACTIVATE") {
       newStatus = "ACTIVE";
+    } else if (action === "FORCE_DUE") {
+      newStatus = "ACTIVE";
+      nextBillingDate = new Date();
     }
 
     const updated = await prisma.$transaction(async (tx) => {
